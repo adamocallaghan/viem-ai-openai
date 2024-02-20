@@ -98,7 +98,7 @@ async function endGame() {
   console.log("========== ENDING GAME ==========");
   console.log("=== GameId: ", gameId, " ===");
   var endGame = await client.writeContract({
-    address: '0x4e2dd804E4f7CCEbaDa82531d52D8F998541c997',
+    address: '0xa3F00Bc558A0Ef68a5Ee5Ffda924e7Ed95613328',
     abi: wagmiAbi,
     functionName: 'endGame',
     account,
