@@ -24,7 +24,7 @@ const client = createWalletClient({
 // === CREATE GAME: calls createGame() on our contract on Fantom testnet
 async function createGame() {
   var createGame = await client.writeContract({
-    address: '0x4e2dd804E4f7CCEbaDa82531d52D8F998541c997',
+    address: '0xa3F00Bc558A0Ef68a5Ee5Ffda924e7Ed95613328',
     abi: wagmiAbi,
     functionName: 'createGame',
     account,
@@ -52,10 +52,11 @@ const publicClient = createPublicClient({
 
 async function endGame() {
   // await setTimeout(600000); // wait 10 minutes
-  await setTimeout(20000); // wait 20 seconds
+  await setTimeout(1500000) // wait 25 minutes
+  // await setTimeout(180000); // wait 20 seconds
 
   const gameId = await publicClient.readContract({
-    address: '0x4e2dd804E4f7CCEbaDa82531d52D8F998541c997',
+    address: '0xa3F00Bc558A0Ef68a5Ee5Ffda924e7Ed95613328',
     abi: wagmiAbi,
     functionName: 'gameId',
   })
